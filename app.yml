@@ -1,0 +1,14 @@
+version: '2'
+services:
+    server:
+        build: server
+
+    client1:
+        build: client
+        external_links:
+            - server:server
+
+    client2:
+        build: client
+        external_links:
+            - server:server
