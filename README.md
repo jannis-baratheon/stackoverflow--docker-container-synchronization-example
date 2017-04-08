@@ -1,5 +1,5 @@
 # Docker container synchronization example
 
-This is an example of how to synchronize docker containers, i.e. how to make a container wait until a dependant container starts up.
+This is an example of how to synchronize docker containers, i.e. how to make some containers wait for dependant containers to start.
 
-The idea is that every container opens up a diagnostic port which serves component's status (warming up/running) for other containers to test on and delay their start until the dependant containers are ready.
+The idea is that every container opens up a diagnostic port which serves component's status (warming up/running). The dependant containers can then delay their start until the server is ready.
