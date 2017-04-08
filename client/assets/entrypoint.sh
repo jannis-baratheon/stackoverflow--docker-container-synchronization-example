@@ -2,7 +2,11 @@
 
 trap 'kill $(jobs -p)' EXIT
 
-/assets/wait_for_server.sh server &
+for server in $DEPENDS_ON
+do
+    /assets/wait_for_server.sh $server &
+    wait $!
+done
 
 wait $!
 

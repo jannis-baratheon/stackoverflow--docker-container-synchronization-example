@@ -1,14 +1,18 @@
 version: '2'
 services:
-    server:
+    server1:
         build: server
+        container_name: server1
 
-    client1:
-        build: client
-        external_links:
-            - server:server
+    server2:
+        build: server
+        container_name: server2
 
-    client2:
+    client:
         build: client
+        container_name: client
         external_links:
-            - server:server
+            - server1:server1
+            - server2:server2
+        environment:
+            - DEPENDS_ON=server1 server2

@@ -1,6 +1,10 @@
 #!/bin/bash
 
-echo Sending request: PING
-response=$(echo "PING" | nc server 8080)
-echo Server replied: $response
+for server in $DEPENDS_ON
+do
+    echo Sending request to $server: PING
+    response=$(echo "PING" | nc $server 8080)
+    echo Server $server replied: $response
+done
+
 echo Can exit now. Bye!
