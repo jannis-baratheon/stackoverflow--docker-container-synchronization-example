@@ -6,6 +6,10 @@ The idea is that every container opens up a diagnostic port which serves compone
 
 # Running the example
 
-Make sure you have *docker* and *docker-compose installed*. Then just run this command from the root of the cloned sources:
+Make sure you have *docker* and *docker-compose* installed. Then just run this convenience script from the root of the cloned sources:
 
     ./dc.sh build && ./dc.sh up
+
+or call docker compose directly:
+    
+    docker-compose -f app.yml build && docker-compose -f app.yml up
