@@ -8,7 +8,7 @@ The idea is that every container opens up a diagnostic port which serves compone
 
 Make sure you have *docker* and *docker-compose* installed. Then just run this convenience script from the root of the cloned sources:
 
-    ./dc.sh build && ./dc.sh up
+    ./run-example.sh
 
 or call docker compose directly:
 
