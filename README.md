@@ -11,5 +11,5 @@ Make sure you have *docker* and *docker-compose* installed. Then just run this c
     ./dc.sh build && ./dc.sh up
 
 or call docker compose directly:
-    
+
     docker-compose -f app.yml build && docker-compose -f app.yml up
