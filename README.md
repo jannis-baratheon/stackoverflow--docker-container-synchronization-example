@@ -1,3 +1,5 @@
+This is a code reference for [a StackOverflow answer](https://stackoverflow.com/a/43312136/4494577).
+
 # Docker container synchronization example
 
 This is an example of how to synchronize docker containers, i.e. how to make some containers wait for dependant containers to start.
